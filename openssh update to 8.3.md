@@ -47,7 +47,7 @@ echo 'PasswordAuthentication yes' >>/usr/local/openssh/etc/sshd_config
 
 
 * 备份原有文件，并将新的配置复制到指定目录
-
+cp openssh编译的目录下/contrib/redhat/sshd.init /etc/init.d/sshd
 mv /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
 cp /usr/local/openssh/etc/sshd_config /etc/ssh/sshd_config
 mv /usr/sbin/sshd /usr/sbin/sshd.bak
