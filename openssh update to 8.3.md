@@ -67,12 +67,12 @@ systemctl restart sshd
 
 ssh -V
 
-cd /etc/systemd/system/
+*  cd /etc/systemd/system/
 vi sshd.service
-# 在[Service]部分将
-# Type=notify 修改为
-# Type=simple 保存退出
-# 没有这个Type就在[Service]下面一行加上
+在[Service]部分将
+Type=notify 修改为
+Type=simple 保存退出
+没有这个Type就在[Service]下面一行加上
 systemctl daemon-reload
 systemctl enable sshd.service
 systemctl restart sshd.service
